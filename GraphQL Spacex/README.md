@@ -7,4 +7,4 @@ El archivo está en .rar porque son muchos y no quise hacer todo el set-up de Gi
 Se hizo siguiendo este tutorial: https://youtu.be/7wzR4Ig5pTI
 Que a su vez está basado en este repositorio: https://github.com/arjunyel/angular-spacex-graphql-codegen
 
-![alt text](https://github.com/[AlanRodz]/[Proyectos-NodeJS]/blob/[branch]/imagen.jpg?raw=true)
+![Así se ve la página](https://github.com/[AlanRodz]/[Proyectos-NodeJS]/blob/[main]/imagen.jpg?raw=true)
