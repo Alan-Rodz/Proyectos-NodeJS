@@ -1,4 +1,4 @@
-Breve introducción a conceptos básicos de WA.
+Breve introducción a conceptos básicos de WebAssembly.
 
 En este ejemplo compilamos test.c a test.wasm usando esta herramienta: https://mbebenita.github.io/WasmExplorer/
 
