@@ -1,0 +1,11 @@
+.basic-grid{
+    display:grid;
+    
+    /*Espacio entre los elementos */
+    gap: 1rem;
+
+    /* Los argumentos son nuestro numero de elementos y la unidad que usamos*/
+    /* Nos aseguramos de que nuestras columnas no vayan menos que 240px, pero que puedan expandirse hasta 1fr */
+    /* Auto-fit hace que se calcule el numero de columnas de manera automatica */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

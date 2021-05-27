@@ -1,0 +1,23 @@
+.photo-grid{
+    display:grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    
+    /*Hacemos que todas nuestras filas tengan la misma dimensión*/
+    grid-auto-rows: 240px;
+}
+
+/*Lo siguiente solo aplica si NO estamos en un celular*/
+@media screen and (min-width: 600px){
+    /*Todos los elementos con esta clase tendrán varias filas de altura*/
+    /*Auto indica en qué punto termina el espacio que ocupa, y será calculado de manera automática*/
+    .card-tall{
+        grid-row: span 2 / auto;
+    }
+
+    /*Todos los elementos con esta clase tendrán varias columnas de anchura*/
+    /*Funciona de manera similar al de arriba*/
+    .card-wide{
+        grid-column: span 2 / auto;
+    }
+}

@@ -1,0 +1,111 @@
+.animated-grid{
+    height:85vh;
+    display:grid;
+    gap: 1rem;
+
+    /* Grid explicito, donde definimos manualmente columnas y filas */
+    /*Le damos diferentes nombres a las diferentes areas de la grid*/
+    /*Las estrellas representan el contenido principal*/
+    grid-template-areas:     
+    'a  b  c  d'
+    'l  🌟 🌟 e'
+    'k  🌟 🌟 f'
+    'j  i  h  g';
+
+    /*Le damos tamaños a las columnas y a las filas*/
+    /*Cada fila tomará 25% de la altura de la página*/
+    grid-template-rows: repeat(4, 25%);
+
+    /*La primera columna tiene 240px, las otras 2 se re acomodarán de manera automática, y la última también 240px*/
+    grid-template-columns: 240px auto auto 240px;
+
+    /*Esto controla la animación*/
+    --stagger-delay: 100ms;
+}
+
+/*Keyframes para ir de un conjunto de propiedades a otro*/
+@keyframes cardEntrance{
+    from {
+        /*Opacidad de 0 es invisible*/
+        opacity: 0;
+        transform: scale(0.3);
+
+        /*Rotamos el color 180 grados*/
+        filter: hue-rotate(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+}
+
+.card{
+    background-color: rgb(36, 243, 147);
+
+    /*Definimos la animacion que usan y el tiempo que se tardan*/
+    animation: cardEntrance 700ms ease-out;
+
+    /*Hacemos que comiencen invisibles y luego se hagan visibles*/
+    animation-fill-mode: backwards;
+}
+
+/* Ponemos a los hijos de los elementos en su area apropiada */
+/*Le aplicamos grid-area:a a este elemento*/
+.card:nth-child(1){
+    grid-area:a;
+
+    /*Controla la animación de este elemento*/
+    animation-delay: calc(1*var(--stagger-delay));
+}
+
+/*Hacemos lo mismo para los demás elementos*/
+.card:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.card:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.card:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.card:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.card:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.card:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.card:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.card:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.card:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.card:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.card:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+
+.card:last-child {
+  grid-area: 🌟;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
